@@ -1,0 +1,387 @@
+/* Sidebar - Updated to match background */
+.sidebar {
+  width: 90px;
+  background:rgba(0, 0, 0, 0.589);
+  color: #333;
+  padding: 70px 0 20px 0;
+  height: 100vh;
+  z-index: 100;
+  border-right: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 5px 0 25px rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-shrink: 0;
+  position: relative;
+  -webkit-overflow-scrolling: touch;
+}
+ 
+.sidebar-top {
+  position: absolute;
+  top: 25px;
+  left: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 15px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  margin: 0 15px;
+}
+ 
+.logo-circle {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #5418b4 0%, #39137e 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 20px;
+  color: white;
+  margin-bottom: 8px;
+  box-shadow: 0 8px 25px rgba(139, 111, 184, 0.4);
+}
+ 
+.logo-text {
+  font-size: 12px;
+  font-weight: 600;
+  color:white;
+  letter-spacing: 1px;
+}
+ 
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+  gap:10px;
+  -webkit-overflow-scrolling: touch;
+}
+ 
+.sidebar li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 0;
+  color:white;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  width: 80%;
+  margin: 3px 0;
+  border-radius: 6px;
+  position: relative;
+  -webkit-tap-highlight-color: rgba(139, 111, 184, 0.2);
+}
+ 
+.sidebar li i {
+  font-size: 15px;
+  margin-bottom: 6px;
+  background: white;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+ 
+.sidebar li span {
+  font-size: 11px;
+  font-weight: 500;
+ color:white;
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  text-align: center;
+  line-height: 1.2;
+  padding: 0 5px;
+}
+ 
+.sidebar li:hover {
+  background: rgba(139, 111, 184, 0.15);
+  transform: translateX(3px);
+}
+ 
+.sidebar li:hover i,
+.sidebar li:hover span {
+  color: #5a4a76;
+}
+ 
+/* Enhanced Active State with Purple Highlight */
+.sidebar li.active {
+  border-left: 4px solid #631ad8;
+  position: relative;
+  overflow: hidden;
+}
+ 
+/* Purple glow effect around active item */
+.sidebar li.active::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+   background: linear-gradient(135deg, #6c3fb6 0%, #6742aa 100%);
+  border-radius: 14px;
+  z-index: -1;
+  filter: blur(4px);
+  opacity: 0.7;
+  animation: pulseGlow 2s infinite alternate;
+}
+ 
+/* Inner highlight for active item */
+ 
+ 
+.sidebar li.active i {
+  background: linear-gradient(135deg, #2b0fbb 0%, #4823be 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: white;
+  transform: scale(1.1);
+}
+ 
+.sidebar li.active span {
+  color: white;
+  font-weight: 700;
+  text-shadow: 0 1px 2px rgba(255, 255, 255, 0.8);
+  letter-spacing: 0.3px;
+}
+ 
+/* Active indicator dot */
+ 
+ 
+/* Purple highlight for the active section */
+.sidebar .active-highlight {
+  position: absolute;
+  left: 0;
+  width: 4px;
+  height: 60px;
+  background: linear-gradient(to bottom, #37229e, #4017c5);
+  border-radius: 0 4px 4px 0;
+  transform: translateY(-50%);
+  transition: top 0.3s ease;
+}
+ 
+.sidebar-avatar {
+  margin-top: auto;
+  padding: 20px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+ 
+.avatar-circle {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #8a61cb 0%, #7f62b5 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 16px;
+  color: white;
+  margin-bottom: 6px;
+  box-shadow: 0 6px 20px rgba(139, 111, 184, 0.4);
+}
+ 
+.avatar-text {
+  font-size: 10px;
+  color: #6d5d8a;
+  font-weight: 500;
+}
+ 
+/* Animations */
+ 
+ 
+ 
+ 
+/* Responsive for Sidebar */
+@media (max-width: 576px) {
+  .sidebar {
+    width: 70px;
+  }
+ 
+  .sidebar li {
+    min-height: 44px;
+  }
+ 
+  .sidebar li.active {
+    transform: translateX(3px);
+  }
+ 
+  .sidebar li.active::before {
+    filter: blur(2px);
+  }
+}
+ 
+/* Touch device improvements for sidebar */
+@media (hover: none) and (pointer: coarse) {
+  .sidebar li:hover {
+    transform: none;
+  }
+ 
+  .sidebar li:active {
+    background:rgb(119, 10, 243)
+  }
+ 
+  .sidebar li.active {
+    transform: translateX(3px);
+  }
+}
+ 
+/* Prevent text selection on sidebar elements */
+.sidebar li {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+/* Logout Item Styles */
+.sidebar-logout {
+  margin-top: auto;
+  padding: 20px 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+ 
+.logout-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 0;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  width: 80%;
+  margin: 3px 0;
+  border-radius: 6px;
+  position: relative;
+  -webkit-tap-highlight-color: rgba(139, 111, 184, 0.2);
+}
+ 
+.logout-item i {
+  font-size: 15px;
+  margin-bottom: 6px;
+  background: white;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+ 
+.logout-item span {
+  font-size: 11px;
+  font-weight: 500;
+  color: white;
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  text-align: center;
+  line-height: 1.2;
+  padding: 0 5px;
+}
+ 
+.logout-item:hover {
+  background: rgba(90, 48, 145, 0.829);
+  transform: translateX(3px);
+}
+ 
+.logout-item:hover i {
+  background: white;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+ 
+.logout-item:hover span {
+  color:white;
+}
+ 
+/* Logout active state (if needed) */
+.logout-item.active {
+  border-left: 4px solid #ff3b30;
+  position: relative;
+  overflow: hidden;
+}
+ 
+.logout-item.active::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(135deg, #ff3b30 0%, #ff2d55 100%);
+  border-radius: 14px;
+  z-index: -1;
+  filter: blur(4px);
+  opacity: 0.7;
+  animation: pulseGlow 2s infinite alternate;
+}
+ 
+.logout-item.active i {
+  background: linear-gradient(135deg, #ff3b30 0%, #ff2d55 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: white;
+  transform: scale(1.1);
+}
+ 
+.logout-item.active span {
+  color: white;
+  font-weight: 700;
+  text-shadow: 0 1px 2px rgba(255, 255, 255, 0.8);
+  letter-spacing: 0.3px;
+}
+/* Admin badge styling */
+.admin-badge {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 20px;
+  margin: 10px 20px;
+  background: linear-gradient(135deg, rgba(255, 193, 7, 0.1) 0%, rgba(255, 193, 7, 0.05) 100%);
+  border: 1px solid rgba(255, 193, 7, 0.3);
+  border-radius: 10px;
+  color: #ffc107;
+  font-weight: 600;
+  font-size: 13px;
+}
+ 
+.admin-badge i {
+  font-size: 14px;
+}
+ 
+/* Admin item badge */
+.admin-item-badge {
+  margin-left: auto;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  font-size: 10px;
+  font-weight: 700;
+  padding: 3px 8px;
+  border-radius: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+ 
+/* Optional: Add different styling for admin menu items */
+.sidebar li[data-admin="true"] {
+  border-left: 3px solid #667eea;
+  background: rgba(102, 126, 234, 0.05);
+}
+ 
+/* Make sure the logout stays at bottom */
+.sidebar-logout {
+  margin-top: auto;
+}

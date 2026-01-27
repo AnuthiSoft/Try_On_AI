@@ -1,0 +1,756 @@
+/* Login.css - Fully Responsive for All Mobile Resolutions */
+.login-purple-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  position: relative;
+  overflow-x: hidden;
+  width: 100%;
+}
+
+/* Background Gradient - Mobile optimized */
+.login-purple-gradient-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  z-index: -1;
+}
+
+.login-gradient-circle {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.login-circle-1 {
+  width: 200px;
+  height: 200px;
+  top: -100px;
+  right: -100px;
+}
+
+.login-circle-2 {
+  width: 150px;
+  height: 150px;
+  bottom: -75px;
+  left: -75px;
+}
+
+.login-circle-3 {
+  width: 100px;
+  height: 100px;
+  bottom: 20%;
+  right: 10%;
+}
+
+/* Main Login Card - Mobile first */
+.login-purple-card {
+  width: 100%;
+  max-width: 450px;
+  background: white;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 40px rgba(102, 126, 234, 0.2);
+  margin: 0 auto;
+}
+
+/* Hide left side on mobile */
+.login-brand-showcase-side {
+  display: none;
+}
+
+/* Form Side - Full width for mobile */
+.login-form-side {
+  width: 100%;
+  padding: 32px 24px;
+  background: white;
+}
+
+.login-form-container {
+  width: 100%;
+  max-width: 100%;
+}
+
+/* Header for mobile */
+.login-form-header {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.login-form-header h2 {
+  font-size: 28px;
+  color: #1f2937;
+  margin-bottom: 8px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.login-form-subtitle {
+  color: #6b7280;
+  font-size: 15px;
+  line-height: 1.4;
+  padding: 0 10px;
+}
+
+/* Form Styles - Mobile optimized */
+.login-purple-form {
+  width: 100%;
+}
+
+.login-input-group {
+  margin-bottom: 20px;
+}
+
+.login-input-group label {
+  display: block;
+  margin-bottom: 6px;
+  color: #374151;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.login-input-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.login-input-icon {
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #9ca3af;
+  z-index: 1;
+}
+
+.login-input-icon svg {
+  width: 18px;
+  height: 18px;
+  stroke-width: 2;
+}
+
+.login-purple-input {
+  width: 100%;
+  padding: 15px 15px 15px 48px;
+  border: 1.5px solid #e5e7eb;
+  border-radius: 12px;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  background: white;
+  box-sizing: border-box;
+  height: 52px;
+  max-width: 100%;
+}
+
+/* Prevent zoom on iOS */
+@media screen and (max-width: 768px) {
+  .login-purple-input {
+    font-size: 16px;
+  }
+}
+
+.login-purple-input:focus {
+  outline: none;
+  border-color: #8b5cf6;
+  box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.1);
+}
+
+.login-purple-input::placeholder {
+  color: #9ca3af;
+  font-size: 15px;
+}
+
+/* Login Button - Mobile touch friendly */
+.login-submit-btn {
+  width: 100%;
+  background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%);
+  color: white;
+  border: none;
+  padding: 17px;
+  border-radius: 12px;
+  font-size: 17px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin: 24px 0 16px 0;
+  height: 54px;
+  max-width: 100%;
+}
+
+.login-submit-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(139, 92, 246, 0.3);
+}
+
+/* Error Message */
+.login-error-message {
+  background: #fee2e2;
+  color: #dc2626;
+  padding: 14px;
+  border-radius: 8px;
+  margin-bottom: 16px;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+}
+
+.login-error-icon {
+  width: 18px;
+  height: 18px;
+  stroke: #dc2626;
+  flex-shrink: 0;
+}
+
+/* Divider */
+.login-divider {
+  text-align: center;
+  margin: 24px 0;
+  color: #9ca3af;
+  font-size: 14px;
+  position: relative;
+  width: 100%;
+}
+
+.login-divider::before,
+.login-divider::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  width: 30%;
+  height: 1px;
+  background: #e5e7eb;
+}
+
+.login-divider::before {
+  left: 0;
+}
+
+.login-divider::after {
+  right: 0;
+}
+
+/* Sign Up Link */
+.login-signup-link {
+  text-align: center;
+  color: #6b7280;
+  font-size: 15px;
+  padding: 8px 0;
+  width: 100%;
+}
+
+.login-signup-text {
+  color: #8b5cf6;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.login-signup-text:hover {
+  text-decoration: underline;
+}
+
+/* ===== RESPONSIVE BREAKPOINTS FOR ALL DEVICES ===== */
+
+/* Extra Small Mobile (iPhone SE, Galaxy Fold) - 320px to 374px */
+@media (max-width: 374px) {
+  .login-purple-container {
+    padding: 12px;
+  }
+  
+  .login-purple-card {
+    border-radius: 16px;
+    max-width: 100%;
+  }
+  
+  .login-form-side {
+    padding: 24px 20px;
+  }
+  
+  .login-form-header h2 {
+    font-size: 24px;
+  }
+  
+  .login-form-subtitle {
+    font-size: 14px;
+  }
+  
+  .login-purple-input {
+    height: 48px;
+    padding: 14px 14px 14px 44px;
+    font-size: 15px;
+  }
+  
+  .login-submit-btn {
+    height: 50px;
+    padding: 15px;
+    font-size: 16px;
+  }
+  
+  .login-input-icon {
+    left: 14px;
+  }
+  
+  .login-input-icon svg {
+    width: 16px;
+    height: 16px;
+  }
+  
+  .login-divider {
+    font-size: 13px;
+  }
+  
+  .login-signup-link {
+    font-size: 14px;
+  }
+}
+
+/* Small Mobile (iPhone 6/7/8, etc.) - 375px to 424px */
+@media (min-width: 375px) and (max-width: 424px) {
+  .login-purple-container {
+    padding: 14px;
+  }
+  
+  .login-purple-card {
+    max-width: 100%;
+  }
+  
+  .login-form-side {
+    padding: 28px 22px;
+  }
+  
+  .login-form-header h2 {
+    font-size: 26px;
+  }
+  
+  .login-form-subtitle {
+    font-size: 15px;
+  }
+   .login-submit-btn
+  {
+    width:50%;
+    margin:10px auto;
+  }
+  
+}
+
+/* Medium Mobile (iPhone 12/13, Pixel, etc.) - 425px to 767px */
+@media (min-width: 425px) and (max-width: 767px) {
+  .login-purple-container {
+    padding: 16px;
+  }
+  
+  .login-purple-card {
+    max-width: 400px;
+  }
+  
+  .login-form-side {
+    padding: 32px 28px;
+  }
+  
+  .login-form-header h2 {
+    font-size: 28px;
+  }
+  
+  .login-form-subtitle {
+    font-size: 16px;
+  }
+   .login-submit-btn
+  {
+    width:50%;
+    margin:10px auto;
+  }
+  
+}
+
+/* Tablet (Portrait) - 768px to 1023px */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .login-purple-container {
+    padding: 24px;
+  }
+  
+  .login-purple-card {
+    max-width: 520px;
+    border-radius: 24px;
+  }
+  
+  .login-form-side {
+    padding: 40px 36px;
+  }
+  
+  .login-form-header h2 {
+    font-size: 32px;
+  }
+  
+  .login-form-subtitle {
+    font-size: 16px;
+  }
+   .login-submit-btn
+  {
+    width:50%;
+    margin:10px auto;
+  }
+  
+  
+  /* Show left side on tablet */
+  .login-purple-card {
+    display: flex;
+    max-width: 700px;
+  }
+  
+  .login-brand-showcase-side {
+    display: flex;
+    flex: 1;
+    background: linear-gradient(135deg, #7c3aed 0%, #5b21b6 100%);
+    padding: 40px;
+    color: white;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+   .login-submit-btn
+  {
+    width:50%;
+    margin:10px auto;
+  }
+  
+  
+  .login-logo-container {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 40px;
+  }
+  
+  .login-logo-icon {
+    font-size: 24px;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 10px;
+    border-radius: 12px;
+    backdrop-filter: blur(10px);
+  }
+  
+  .login-logo-text {
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+  }
+  
+  .login-brand-title {
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 16px;
+    background: linear-gradient(45deg, #fff, #e0e7ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  .login-brand-subtitle {
+    font-size: 16px;
+    opacity: 0.9;
+    margin-bottom: 40px;
+  }
+  
+  .login-form-side {
+    flex: 1;
+    padding: 50px 40px;
+  }
+}
+
+/* Desktop - 1024px and above */
+@media (min-width: 1024px) {
+  .login-purple-card {
+    max-width: 500px;
+    display: flex;
+  }
+  .login-submit-btn
+  {
+    width:50%;
+    margin:10px auto;
+  }
+  
+  .login-brand-showcase-side {
+    display: flex;
+    flex: 1;
+    background: linear-gradient(135deg, #7c3aed 0%, #5b21b6 100%);
+    padding: 40px;
+    color: white;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .login-logo-container {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 40px;
+  }
+  
+  .login-logo-icon {
+    font-size: 24px;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 10px;
+    border-radius: 12px;
+    backdrop-filter: blur(10px);
+  }
+  
+  .login-logo-text {
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+  }
+  
+  .login-brand-title {
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 16px;
+    background: linear-gradient(45deg, #fff, #e0e7ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  .login-brand-subtitle {
+    font-size: 18px;
+    opacity: 0.9;
+    margin-bottom: 40px;
+  }
+  
+  .login-form-side {
+    flex: 1;
+    padding: 60px 50px;
+  }
+  
+  .login-form-header h2 {
+    font-size: 36px;
+  }
+  
+  .login-form-subtitle {
+    font-size: 17px;
+  }
+}
+
+/* ===== SPECIFIC FIXES ===== */
+
+/* Fix for tall phones (18:9, 19:9, 20:9 aspect ratios) */
+@media (min-height: 700px) and (max-width: 767px) {
+  .login-purple-container {
+    min-height: 100vh;
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+  
+  .login-form-side {
+    padding: 40px 32px;
+  }
+}
+
+/* Fix for short phones */
+@media (max-height: 600px) and (max-width: 767px) {
+  .login-purple-container {
+    align-items: flex-start;
+    padding-top: 20px;
+  }
+  
+  .login-purple-card {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .login-form-side {
+    padding: 24px 20px;
+  }
+}
+
+/* Landscape mode for mobile */
+@media (max-height: 500px) and (orientation: landscape) {
+  .login-purple-container {
+    padding: 10px;
+    align-items: flex-start;
+  }
+  
+  .login-purple-card {
+    max-width: 90%;
+    margin: 10px auto;
+  }
+  
+  .login-form-side {
+    padding: 20px;
+  }
+  
+  .login-form-header {
+    margin-bottom: 20px;
+  }
+  
+  .login-form-header h2 {
+    font-size: 22px;
+    margin-bottom: 4px;
+  }
+  
+  .login-form-subtitle {
+    font-size: 14px;
+  }
+  
+  .login-input-group {
+    margin-bottom: 15px;
+  }
+  
+  .login-purple-input {
+    height: 44px;
+    padding: 12px 12px 12px 42px;
+  }
+  
+  .login-submit-btn {
+    height: 46px;
+    padding: 12px;
+    font-size: 15px;
+    margin: 20px 0 12px 0;
+  }
+}
+
+/* Fix for iOS Safari */
+@supports (-webkit-touch-callout: none) {
+  .login-purple-container {
+    min-height: -webkit-fill-available;
+  }
+}
+
+/* Prevent text size adjustment on mobile */
+html {
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+
+/* Ensure form elements don't overflow */
+.login-purple-input,
+.login-submit-btn,
+.login-error-message,
+.login-divider,
+.login-signup-link {
+  max-width: 100%;
+  box-sizing: border-box;
+}
+/* Reset Password Modal Styles */
+.reset-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(10px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.reset-modal {
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+  border-radius: 24px;
+  padding: 2px;
+  max-width: 400px;
+  width: 90%;
+  box-shadow: 0 20px 60px rgba(106, 17, 203, 0.3);
+}
+
+.reset-modal-content {
+  background: #0f1123;
+  border-radius: 22px;
+  padding: 32px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.reset-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.reset-modal-header h3 {
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.reset-modal-close {
+  background: transparent;
+  border: none;
+  color: #8a8aa3;
+  font-size: 24px;
+  cursor: pointer;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.reset-modal-close:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+}
+
+.reset-modal-body {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.reset-input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.reset-input-group label {
+  color: #8a8aa3;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.reset-btn {
+  width: 100%;
+  margin-top: 10px;
+}
+
+/* Forgot Password Link */
+.login-forgot-password {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 20px;
+}
+
+.login-forgot-password-btn {
+  background: transparent;
+  border: none;
+  color: #8a8aa3;
+  font-size: 0.875rem;
+  cursor: pointer;
+  padding: 0;
+  transition: color 0.3s ease;
+}
+
+.login-forgot-password-btn:hover {
+  color: #6a11cb;
+}
+
+/* Disabled button state */
+.reset-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}

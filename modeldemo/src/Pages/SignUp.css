@@ -1,0 +1,756 @@
+/* SignUp.css - Responsive with Desktop No-Scroll & Mobile Scroll */
+.signup-page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+}
+
+/* Main container - Desktop: fixed height, Mobile: scrollable */
+.signup-container {
+  width: 500px;
+  max-width: 450px;
+  background: white;
+  border-radius: 18px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+  padding: 10px 30px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Add a wrapper to help with scrolling */
+.signup-form-wrapper {
+  width: 100%;
+}
+
+/* Header */
+.signup-header {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.signup-header h2 {
+  font-size: 24px;
+  font-weight: 700;
+  color: #2d3748;
+  margin-bottom: 5px;
+}
+
+.signup-header p {
+  color: #718096;
+  font-size: 14px;
+}
+
+/* Account Type DROPDOWN */
+.account-type-dropdown {
+  margin-bottom: 20px;
+}
+
+.account-type-dropdown label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 600;
+  color: #4a5568;
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+.account-type {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.account-type-info-icon {
+  font-size: 19px;
+  color: #667eea;
+  margin: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.dropdown-select {
+  width: 100%;
+  padding: 12px 16px;
+  border: 2px solid #e2e8f0;
+  border-radius: 10px;
+  font-size: 14px;
+  color: #4a5568;
+  background: white;
+  cursor: pointer;
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  background-size: 16px;
+  padding-right: 40px;
+}
+
+.dropdown-select:focus {
+  outline: none;
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+/* Form */
+.signup-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* Form Group - Using CSS Grid for consistent height */
+.form-group {
+  display: grid;
+  grid-template-rows: auto 44px auto;
+  gap: 4px;
+  min-height: 70px;
+}
+
+.form-group label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 600;
+  color: #4a5568;
+  font-size: 13px;
+  height: 20px;
+}
+
+/* Email with inline OTP */
+.email-with-otp {
+  display: flex;
+  gap: 8px;
+  align-items: flex-start;
+  grid-row: 2;
+}
+
+.email-input-wrapper {
+  flex: 1;
+  position: relative;
+  min-width: 0;
+  height: 44px;
+}
+
+.email-input-wrapper input {
+  width: 100%;
+  padding: 12px 16px 12px 40px;
+  border: 2px solid #e2e8f0;
+  border-radius: 10px;
+  font-size: 14px;
+  background: white;
+  color: #2d3748;
+  height: 44px;
+  box-sizing: border-box;
+}
+
+.email-input-wrapper .input-icon {
+  position: absolute;
+  left: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #a0aec0;
+  font-size: 15px;
+}
+
+/* Small OTP button */
+.send-otp-inline {
+  padding: 10px 14px;
+  background: #667eea;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  height: 44px;
+  flex-shrink: 0;
+}
+
+.send-otp-inline:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* OTP section */
+.email-otp-section {
+  background: #f8fafc;
+  border-radius: 10px;
+  padding: 12px;
+  border: 1px solid #e2e8f0;
+  margin-top: 8px;
+  width: 100%;
+  grid-column: 1 / -1;
+  grid-row: 4;
+}
+
+.otp-header h4 {
+  font-size: 14px;
+  font-weight: 600;
+  color: #2d3748;
+  margin-bottom: 3px;
+}
+
+.otp-header p {
+  color: #718096;
+  font-size: 12px;
+  margin: 0;
+}
+
+/* OTP inputs */
+.otp-inputs {
+  display: flex;
+  gap: 6px;
+  justify-content: center;
+  margin: 12px 0;
+  flex-wrap: wrap;
+}
+
+.otp-input {
+  width: 36px;
+  height: 40px;
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+  border: 2px solid #e2e8f0;
+  border-radius: 8px;
+  background: white;
+  box-sizing: border-box;
+}
+
+/* OTP actions */
+.otp-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.verify-otp-btn {
+  padding: 8px 16px;
+  background: #48bb78;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.resend-otp {
+  background: none;
+  border: none;
+  color: #667eea;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+/* Input fields */
+.input-with-icon {
+  position: relative;
+  width: 100%;
+  height: 44px;
+  grid-row: 2;
+}
+
+.input-with-icon input {
+  width: 100%;
+  padding: 12px 16px 12px 40px;
+  border: 2px solid #e2e8f0;
+  border-radius: 10px;
+  font-size: 14px;
+  background: white;
+  color: #2d3748;
+  height: 44px;
+  box-sizing: border-box;
+}
+
+.input-icon {
+  position: absolute;
+  left: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #a0aec0;
+  font-size: 15px;
+}
+
+.toggle-password {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: #a0aec0;
+  cursor: pointer;
+  padding: 4px;
+  font-size: 14px;
+}
+
+/* Terms checkbox */
+.terms-checkbox {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 10px 0;
+  grid-column: 1 / -1;
+}
+
+.terms-checkbox input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  margin: 0;
+}
+
+.terms-checkbox label {
+  font-size: 12px;
+  color: #4a5568;
+}
+
+.terms-checkbox a {
+  color: #667eea;
+  text-decoration: none;
+}
+
+/* Signup button */
+.signup-button {
+  padding: 13px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  margin-bottom: 4px;
+  box-sizing: border-box;
+  grid-column: 1 / -1;
+}
+
+.signup-button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+/* Footer */
+.signup-footer {
+  text-align: center;
+  border-top: 1px solid #e2e8f0;
+  font-size: 13px;
+  padding-top: 5px;
+  margin-top: 5px;
+  grid-column: 1 / -1;
+}
+
+.signup-footer p {
+  color: #718096;
+  margin: 0;
+}
+
+.signup-footer a {
+  color: #667eea;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+/* Error messages - Fixed in grid row 3 */
+.form-group .error-message {
+  font-size: 11px;
+  color: #e53e3e;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  grid-row: 3;
+  height: 18px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.form-group .success-message {
+  font-size: 11px;
+  color: #38a169;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  grid-row: 3;
+  height: 18px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+/* Enterprise fields */
+.enterprise-fields {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* General and OTP errors - outside grid */
+.general-error, 
+.otp-error {
+  background: #fee2e2;
+  border: 1px solid #fca5a5;
+  padding: 12px;
+  border-radius: 8px;
+  margin: 10px 0;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  grid-column: 1 / -1;
+}
+
+/* Error state */
+.error {
+  border-color: #e53e3e !important;
+  background-color: #fef2f2 !important;
+}
+
+/* ============= RESPONSIVE BREAKPOINTS ============= */
+
+/* Desktop (1024px and above) - NO SCROLLING */
+@media (min-width: 1024px) {
+  .signup-container {
+    max-height: none !important;
+    overflow: visible !important;
+    max-width: 450px;
+  }
+  
+  .signup-form {
+    max-height: none;
+  }
+}
+
+/* Tablet (768px to 1023px) - Limited scrolling if needed */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .signup-container {
+    max-height: 85vh;
+    overflow-y: auto;
+  }
+  
+  .signup-page {
+    padding: 20px;
+  }
+  
+  .signup-header h2 {
+    font-size: 22px;
+  }
+}
+
+/* Mobile (below 768px) - Allow scrolling */
+@media (max-width: 767px) {
+  .signup-page {
+    padding: 10px;
+  }
+  
+  .signup-container {
+    max-width: 100%;
+    max-height: 90vh;
+    overflow-y: auto;
+    padding: 20px;
+    border-radius: 12px;
+  }
+  
+  .signup-header h2 {
+    font-size: 20px;
+  }
+  
+  /* Stack email and OTP button vertically on mobile */
+  .email-with-otp {
+    flex-direction: row;
+    gap: 8px;
+  }
+  
+  .send-otp-inline {
+    width: 25%;
+    justify-content: center;
+  }
+  
+  /* Adjust form-group height for mobile */
+  .form-group {
+    min-height: 85px;
+  }
+  
+  /* Make OTP inputs smaller on mobile */
+  .otp-inputs {
+    gap: 4px;
+  }
+  
+  .otp-input {
+    width: 32px;
+    height: 36px;
+    font-size: 14px;
+  }
+  
+  /* Stack OTP action buttons on mobile */
+  .otp-actions {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 8px;
+  }
+  
+  .verify-otp-btn,
+  .resend-otp {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+/* Extra Small Mobile (320px to 374px) */
+@media (max-width: 374px) {
+  .signup-container {
+    padding: 15px;
+    max-height: 95vh;
+  }
+  
+  .signup-header h2 {
+    font-size: 18px;
+  }
+  
+  /* Further reduce OTP input size */
+  .otp-inputs {
+    gap: 3px;
+  }
+  
+  .otp-input {
+    width: 28px;
+    height: 32px;
+    font-size: 12px;
+  }
+  
+  .email-input-wrapper input,
+  .input-with-icon input {
+    padding: 10px 14px 10px 36px;
+    height: 42px;
+    font-size: 13px;
+  }
+  
+  .input-icon {
+    left: 12px;
+    font-size: 14px;
+  }
+  
+  .signup-button {
+    padding: 12px;
+    font-size: 14px;
+  }
+}
+
+/* Landscape orientation on mobile */
+@media (max-width: 767px) and (orientation: landscape) {
+  .signup-page {
+    padding: 5px;
+  }
+  
+  .signup-container {
+    max-width: 90%;
+    max-height: 85vh;
+    padding: 15px;
+  }
+  
+  /* Reduce vertical spacing for landscape */
+  .signup-form {
+    gap: 12px;
+  }
+  
+  .signup-header {
+    margin-bottom: 5px;
+  }
+  
+  .account-type-dropdown {
+    margin-bottom: 10px;
+  }
+  
+  .email-with-otp {
+    flex-direction: row;
+  }
+  
+  .send-otp-inline {
+    width: 100%;
+  }
+}
+
+/* Custom scrollbar for mobile/tablet */
+.signup-container::-webkit-scrollbar {
+  width: 6px;
+}
+
+.signup-container::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+.signup-container::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 10px;
+}
+
+.signup-container::-webkit-scrollbar-thumb:hover {
+  background: #a8a8a8;
+}
+
+/* Prevent iOS zoom on input focus */
+@media (max-width: 768px) {
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"],
+  input[type="password"],
+  select {
+    font-size: 16px !important;
+  }
+}
+
+/* Ensure no horizontal scrolling */
+.signup-container,
+.signup-form-wrapper,
+.signup-form {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+/* Make sure all buttons are touch-friendly */
+button,
+input[type="button"],
+input[type="submit"],
+.dropdown-select {
+  min-height: 44px;
+}
+
+/* Fix for Firefox scrollbar */
+@-moz-document url-prefix() {
+  .signup-container {
+    scrollbar-width: thin;
+    scrollbar-color: #c1c1c1 #f1f1f1;
+  }
+}
+
+/* Animation for OTP inputs */
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  75% { transform: translateX(5px); }
+}
+
+.otp-input.error {
+  border-color: #e53e3e;
+  animation: shake 0.3s ease-in-out;
+}
+
+/* Loading animation */
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.fa-spinner {
+  animation: spin 1s linear infinite;
+}
+
+/* Smooth error transitions */
+.error-message {
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* Add this to your SignUp.css file */
+
+/* Hide browser's default eye icon for password fields */
+input[type="password"]::-webkit-textfield-decoration-container {
+  display: none;
+}
+
+input[type="password"]::-webkit-credentials-auto-fill-button {
+  display: none !important;
+  visibility: hidden;
+  pointer-events: none;
+  position: absolute;
+  right: 0;
+}
+
+/* For Firefox */
+input[type="password"]::-moz-textfield-decoration-container {
+  display: none;
+}
+
+input[type="password"]::-moz-credentials-auto-fill-button {
+  display: none !important;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+/* For Edge and IE */
+input[type="password"]::-ms-reveal,
+input[type="password"]::-ms-clear {
+  display: none;
+}
+
+/* For all browsers - the most reliable way */
+input[type="password"] {
+  -webkit-text-security: disc !important;
+  /* This prevents the browser from showing its own reveal button */
+}
+
+/* Ensure our custom toggle button stays on top */
+.toggle-password {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: #a0aec0;
+  cursor: pointer;
+  padding: 4px;
+  font-size: 14px;
+  z-index: 100; /* Increased z-index */
+}
+
+/* Make sure the input field has enough padding on the right */
+.input-with-icon input {
+  padding-right: 44px !important; /* Make space for our eye icon */
+}
+
+/* Specifically for password fields */
+.input-with-icon input[type="password"],
+.input-with-icon input[type="text"] {
+  padding-right: 44px !important;
+}
+
+/* Hide eye icon when password field is empty */
+.input-with-icon:not(:has(input:not(:placeholder-shown))) .toggle-password {
+  opacity: 0.5;
+}

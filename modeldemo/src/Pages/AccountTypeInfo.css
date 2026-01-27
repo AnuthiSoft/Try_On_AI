@@ -1,0 +1,368 @@
+/* Pages/AccountTypeInfo.css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.account-type-info-page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  position: relative;
+  width: 100vw;
+  min-width: 100vw;
+  overflow: auto;
+}
+
+.account-type-container {
+  background: white;
+  border-radius: 20px;
+  padding: 40px;
+  max-width: 1000px;
+  width: 90%;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  max-height: 90vh;
+  overflow-y: auto;
+  margin: auto;
+  position: relative;
+}
+
+/* Header Fix */
+.account-type-header {
+  text-align: center;
+  margin-bottom: 40px;
+  padding-bottom: 20px;
+  border-bottom: 2px solid #e2e8f0;
+}
+
+.account-type-header h1 {
+  color: #2d3748;
+  font-size: 28px;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.subtitle {
+  color: #718096;
+  font-size: 16px;
+  margin: 0;
+}
+
+.account-types-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 30px;
+  margin-bottom: 40px;
+  justify-content: center;
+}
+
+.account-type-card {
+  background: #f7fafc;
+  padding: 30px;
+  border-radius: 15px;
+  border: 2px solid #e2e8f0;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.account-type-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.account-type-card.featured {
+  border-color: #48bb78;
+  background: linear-gradient(135deg, rgba(72, 187, 120, 0.05) 0%, rgba(56, 161, 105, 0.05) 100%);
+}
+
+.featured-badge {
+  position: absolute;
+  top: -12px;
+  right: 20px;
+  background: #48bb78;
+  color: white;
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+/* Fix duplicate class name conflict */
+.type-header-section {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.account-type-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  color: white;
+  flex-shrink: 0;
+}
+
+.account-type-icon.standard {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.account-type-icon.enterprise {
+  background: linear-gradient(135deg, #48bb78 0%, #38a169 100%);
+}
+
+.account-type-title {
+  font-size: 22px;
+  color: #2d3748;
+  margin: 0;
+}
+
+.account-type-subtitle {
+  color: #718096;
+  font-size: 14px;
+  margin: 5px 0 0 0;
+}
+
+.account-type-features {
+  margin: 25px 0;
+}
+
+.account-type-features h3 {
+  font-size: 16px;
+  color: #4a5568;
+  margin-bottom: 15px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.account-type-features ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.account-type-features li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
+  color: #4a5568;
+  font-size: 14px;
+}
+
+.account-type-features li i {
+  color: #48bb78;
+  font-size: 14px;
+}
+
+.account-type-price {
+  text-align: center;
+  margin: 20px 0;
+  padding: 15px;
+  background: white;
+  border-radius: 10px;
+  border: 1px solid #e2e8f0;
+}
+
+.price {
+  font-size: 28px;
+  font-weight: 800;
+  color: #2d3748;
+  display: block;
+}
+
+.period {
+  color: #718096;
+  font-size: 14px;
+}
+
+.best-for {
+  color: #718096;
+  font-size: 13px;
+  font-style: italic;
+  text-align: center;
+  margin: 15px 0 0 0;
+  padding-top: 15px;
+  border-top: 1px solid #e2e8f0;
+}
+
+/* Add select button styles */
+.select-btn {
+  width: 100%;
+  padding: 12px 20px;
+  background: #667eea;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 15px;
+  transition: all 0.3s ease;
+}
+
+.select-btn:hover {
+  background: #5a67d8;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
+}
+
+.select-btn.enterprise-btn {
+  background: #48bb78;
+}
+
+.select-btn.enterprise-btn:hover {
+  background: #38a169;
+  box-shadow: 0 5px 15px rgba(72, 187, 120, 0.3);
+}
+
+.comparison-section {
+  margin: 40px 0;
+  padding-top: 30px;
+  border-top: 2px solid #e2e8f0;
+}
+
+.comparison-section h2 {
+  color: #2d3748;
+  font-size: 22px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.comparison-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.comparison-table th {
+  background: #667eea;
+  color: white;
+  padding: 15px;
+  text-align: left;
+  font-weight: 600;
+}
+
+.comparison-table td {
+  padding: 12px 15px;
+  border-bottom: 1px solid #e2e8f0;
+  color: #4a5568;
+}
+
+.comparison-table tr:nth-child(even) {
+  background: #f7fafc;
+}
+
+.account-type-footer {
+  text-align: center;
+  margin-top: 30px;
+  padding-top: 20px;
+  border-top: 2px solid #e2e8f0;
+}
+
+.close-button {
+  padding: 12px 30px;
+  background: #e2e8f0;
+  color: #4a5568;
+  border: none;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0 auto 20px;
+  transition: all 0.3s ease;
+}
+
+.close-button:hover {
+  background: #cbd5e0;
+  transform: translateY(-2px);
+}
+
+.contact-info {
+  color: #718096;
+  font-size: 14px;
+  margin: 0;
+}
+
+.contact-info a {
+  color: #667eea;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.contact-info a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .account-type-info-page {
+    padding: 10px;
+    align-items: flex-start;
+    min-height: 100vh;
+    height: auto;
+  }
+  
+  .account-type-container {
+    padding: 20px;
+    border-radius: 16px;
+    width: 95%;
+    max-height: none;
+    margin: 10px auto;
+  }
+  
+  .account-type-header h1 {
+    font-size: 24px;
+  }
+  
+  .account-types-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .account-type-card {
+    padding: 20px;
+  }
+  
+  .comparison-table {
+    font-size: 14px;
+    display: block;
+    overflow-x: auto;
+  }
+  
+  .type-header-section {
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+  }
+  
+  .account-type-icon {
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+  }
+}

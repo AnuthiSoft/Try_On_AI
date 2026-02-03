@@ -38,7 +38,7 @@ function PaymentTermsPage() {
   {
     id: 'refunds',
     title: 'Refunds & Cancellations',
-    content:'Refunds are processed in accordance with the Platform’s Refund Policy. Refund eligibility is determined by the Platformafter review of the request. Approved refunds are credited to the original payment method used during the transaction. Refund processing timelines typically range from 3–5 business days, subject to bank or payment gateway processing cycles.'
+    content:'Refunds are processed in accordance with the Platform’s Refund Policy. Refund eligibility is determined by the Platform after review of the request. Approved refunds are credited to the original payment method used during the transaction. Refund processing timelines typically range from 3–5 business days, subject to bank or payment gateway processing cycles.'
   },
   {
     id: 'wallet-balance',

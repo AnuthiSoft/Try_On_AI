@@ -100,7 +100,7 @@ def deduct_credits(
     wallet = get_wallet(user_id)
 
     if wallet["credits"] < total_credits:
-        raise HTTPException(402, "Transaction failed due to insufficient balance")
+        raise HTTPException(402, "Image Generation failed due to insufficient balance")
 
     wallets_coll.update_one(
         {"user_id": user_id},

@@ -106,4 +106,8 @@ html, body {
   height: 4px;
   border-radius: 0 0 10px 10px;
 }
+.header-center h1
+{
+font-size: 2rem;
+}
 

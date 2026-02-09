@@ -1,0 +1,12 @@
+/* Services list styling */
+.section-content ul {
+  margin-top: 12px;
+  padding-left: 20px;
+}
+
+.section-content ul li {
+  font-size: 16px;      /* change size as needed */
+  line-height: 1.6;
+  margin-bottom: 10px; /* 👈 gap between list items */
+  color: #333;
+}

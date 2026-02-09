@@ -132,6 +132,12 @@ import Wallet from "./Components/Wallet/Wallet";
 import Configuration from "./Components/ImagePricingAdmin/ImagePricingAdmin";
 import PaymentTermsStatic from "./Components/PaymentTerms/PaymentTerms"; // Import the static terms component
 import ImageResize from "./Components/ImageResize/ImageResize";
+import Description from "./Components/Description/Description"; // Import Description component
+import AboutUs from "./Components/AboutUs/AboutUs"; // Import AboutUs component
+import ContactUs from "./Components/ContactUs/ContactUs"; // Import ContactUs component
+import PrivacyPolicy from "./Components/PrivacyPolicy/PrivacyPolicy"; // Import PrivacyPolicy component
+import PaymentTermsPage from "./Components/PurchaseFlow/PurchaseFlow"; // Import PaymentTermsPage component
+import RefundCancellation from "./Components/RefundCancellation/RefundCancellation";
 
 import "./App.css";
 
@@ -254,8 +260,15 @@ function App() {
               </ProtectedRoute>
             } />
              <Route path="/payment-terms" element={<PaymentTermsStatic />} />
+             <Route path="/description" element={<Description />} />
+             <Route path="/aboutUs" element={<AboutUs />} />
+             <Route path="/contactUs" element={<ContactUs />} />
+             <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+             <Route path="/purchase-flow" element={<PaymentTermsPage />} />
+             <Route path="/refund-cancellation" element={<RefundCancellation />} />
 
-           
+          
+
             {/* Catch all - redirect to home if authenticated, else to login */}
             <Route path="*" element={
               <ProtectedRoute>

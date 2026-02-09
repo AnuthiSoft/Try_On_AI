@@ -307,7 +307,7 @@ export default function ImagePricingAdmin() {
               ? "🔧 Super Admin Dashboard" 
               : userRole === "enterprise" 
                 ? "🏢 Enterprise Plan" 
-                : "👤 Normal Plan"
+                : "👤 StandardUser Plan"
             }
           </div>
         </div>

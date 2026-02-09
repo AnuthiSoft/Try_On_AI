@@ -1,3 +1,22 @@
+.section-image {
+  width: 1200px;
+  height: 600px;
+}
+.logo-container
+{
+    height:30px;
+    width:30px;
+}
+.header-center
+{
+    display:flex;
+    align-items:center;
+    gap:15px;
+}
+.add-credits {
+  width: 700px !important;
+  height: 900px !important;
+}
 /* PaymentTerms.css - Attractive Version with Horizontal Image Scroll */
 .payment-terms-container {
   width: 95vw;
@@ -152,7 +171,7 @@
 /* Term Section - Each section scrolls horizontally internally */
 .term-section {
   display: flex;
-
+  flex-direction: column;
   gap: 20px;
   margin-bottom: 25px;
   padding: 25px;
@@ -646,15 +665,16 @@
   .third-image {
     height: 200px !important;
   }
+  .logo-image {
+    height: 30px;
+    width: 30px;
+ 
+  }
   
   .back-home-btn-bottom,
   .agree-terms-btn {
     padding: 12px 20px;
     font-size: 0.9rem;
-  }
-  .header-center h1
-  {
-    font-size: 1rem;
   }
 }
 

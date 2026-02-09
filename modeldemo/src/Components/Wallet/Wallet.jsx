@@ -38,7 +38,7 @@ const Wallet = () => {
   const creditPackages = [
     { 
       amount: 100, 
-      label: 'Starter', 
+      label: 'Starter Credits', 
       icon: faStar, 
       color: '#667eea', 
       bonus: 0,
@@ -47,7 +47,7 @@ const Wallet = () => {
     },
     { 
       amount: 500, 
-      label: 'Pro', 
+      label: 'Pro Credits', 
       icon: faBolt, 
       color: '#10b981', 
       bonus: 50,
@@ -56,7 +56,7 @@ const Wallet = () => {
     },
     { 
       amount: 1000, 
-      label: 'Premium', 
+      label: 'Premium Credits', 
       icon: faCrown, 
       color: '#f59e0b', 
       bonus: 150,
@@ -65,7 +65,7 @@ const Wallet = () => {
     },
     { 
       amount: 2500, 
-      label: 'VIP', 
+      label: 'VIP Credits', 
       icon: faGem, 
       color: '#8b5cf6', 
       bonus: 500,
@@ -877,7 +877,6 @@ const Wallet = () => {
                       </div>
                       <div className="option-info">
                         <span>Credit/Debit Card</span>
-                        <small>Visa, Mastercard, Amex</small>
                       </div>
                     </div>
                   </label>
@@ -894,8 +893,7 @@ const Wallet = () => {
                         <FontAwesomeIcon icon={faWallet} />
                       </div>
                       <div className="option-info">
-                        <span>Digital Wallet</span>
-                        <small>PayPal, Apple Pay, Google Pay</small>
+                        <span>Paytm (UPI / Wallet / Cards)</span>
                       </div>
                     </div>
                   </label>
@@ -907,11 +905,7 @@ const Wallet = () => {
                 <div className="total-label">Total Amount:</div>
                 <div className="total-value">
                   {formatCurrency(creditAmount)} credits
-                  {creditPackages.find(p => p.amount === creditAmount)?.bonus > 0 && (
-                    <span className="bonus-text">
-                      +{creditPackages.find(p => p.amount === creditAmount)?.bonus} bonus
-                    </span>
-                  )}
+                 
                 </div>
               </div>
 

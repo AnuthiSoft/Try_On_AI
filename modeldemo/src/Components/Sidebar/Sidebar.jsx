@@ -41,17 +41,18 @@ function Sidebar() {
       path: '/wallet',
     },
     {
+      id: 'image-resize',
+      icon: 'fa-solid fa-image',
+      label: 'Image Resize',
+      path: '/image-resize',
+    },
+    {
       id: 'configuration',
       icon: 'fa-solid fa-gear',
       label: 'Config',
       path: '/configuration',
     },
-    {
-      id: 'configuration',
-      icon: 'fa-solid fa-gear',
-      label: 'Image Resize',
-      path: '/image-resize',
-    },
+    
   ];
 
   const adminMenuItems = isSuperAdmin

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState,useRef, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import "./Landing.css";
 import logo from "../Assets/icon.png";
@@ -12,7 +12,41 @@ function Landing() {
   const navigate = useNavigate();
   const [currentSlide, setCurrentSlide] = useState(0);
   const totalSlides = 4; // Change this based on number of images
+  const [showPages, setShowPages] = useState(false);
+  const pagesRef = useRef(null);
  
+  const pageItems = [
+    { name: 'About Us', path: '/aboutUs' },
+    { name: 'Contact', path: '/contactUs' },
+    { name: 'Service descriptions', path: '/description' },
+    { name: 'purchase flow', path: '/purchase-flow' },
+    { name: 'Privacy Policy', path: '/privacy-policy' },
+    { name: 'Terms And Conditions', path: '/payment-terms' },
+    { name: 'Refund & Cancellation Policy', path: '/refund-cancellation' },
+
+  ];
+ const togglePages = () => {
+    setShowPages(!showPages);
+  };
+
+  const handlePageClick = (path) => {
+    navigate(path);
+    setShowPages(false);
+  };
+
+  // Close dropdown when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (pagesRef.current && !pagesRef.current.contains(event.target)) {
+        setShowPages(false);
+      }
+    };
+
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, []);
   // Auto slideshow effect
   useEffect(() => {
     const interval = setInterval(() => {
@@ -23,6 +57,8 @@ function Landing() {
   }, []);
  
   const handleLogin = () => navigate("/login");
+  const handleAboutUs = () => navigate("/about");
+  const handleContactUs = () => navigate("/contact");
   const handleSignup = () => navigate("/signup");
   const handleGetStarted = () => navigate("/signup");
   const handleBookDemo = () => navigate("/demo");
@@ -30,6 +66,8 @@ function Landing() {
    const handleOpenTermsPage = () => {
     navigate("/payment-terms"); // Navigates to static page
   };
+  const handleRefundCancellation = () => navigate("/refund-cancellation");
+
   return (
     <div className="landing-page">
       {/* Background with model image slideshow */}
@@ -81,7 +119,36 @@ function Landing() {
           </div>
           <div className="logo-text">Anuthi AI</div>
         </div>
+        
         <div className="header-action">
+          <div className="pages-dropdown-container" ref={pagesRef}>
+      <button 
+        className="header-btn login-btn" 
+        onClick={togglePages}
+        style={{ display: 'flex', alignItems: 'center', gap: '5px' }}
+      >
+        Company
+        <span style={{ fontSize: '10px' }}>
+          {showPages ? '▲' : '▼'}
+        </span>
+      </button>
+
+      {showPages && (
+        <div className="pages-dropdown">
+          <div className="pages-list">
+            {pageItems.map((item, index) => (
+              <div 
+                key={index}
+                className="page-item"
+                onClick={() => handlePageClick(item.path)}
+              >
+                {item.name}
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
+    </div>
           <button className="header-btn login-btn" onClick={handleLogin}>
             Login
           </button>
@@ -112,9 +179,9 @@ function Landing() {
               <button className="cta-btn primary-cta" onClick={handleGetStarted}>
                 Get Started Free
               </button>
-              <button className="cta-btn terms-cta" onClick={handleOpenTermsPage}>
+              {/* <button className="cta-btn terms-cta" onClick={handleOpenTermsPage}>
                  View Payment Terms
-              </button>
+              </button> */}
             </div>
           </div>
         </div>

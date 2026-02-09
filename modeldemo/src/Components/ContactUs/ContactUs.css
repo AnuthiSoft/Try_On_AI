@@ -1,3 +1,37 @@
+.contact-info-container {
+  max-width: 600px;
+  margin: 40px 0;          
+  padding-left: 20px;     /* optional left spacing */
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.contact-item p {
+  margin: 0;
+  font-size: 19px;
+  line-height: 1.6;
+  color: #222;
+}
+
+.icon {
+  font-size: 22px;
+  color: #1a73e8;
+  margin-top: 4px;
+}
+
+.contact-item a {
+  color: #1a73e8;
+  text-decoration: none;
+}
+
+
 /* PaymentTerms.css - Attractive Version with Horizontal Image Scroll */
 .payment-terms-container {
   width: 95vw;
@@ -152,7 +186,7 @@
 /* Term Section - Each section scrolls horizontally internally */
 .term-section {
   display: flex;
-
+  flex-direction: column;
   gap: 20px;
   margin-bottom: 25px;
   padding: 25px;
@@ -652,10 +686,12 @@
     padding: 12px 20px;
     font-size: 0.9rem;
   }
-  .header-center h1
-  {
-    font-size: 1rem;
-  }
+  .contact-item p {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #222;
+}
 }
 
 @media (max-width: 400px) {

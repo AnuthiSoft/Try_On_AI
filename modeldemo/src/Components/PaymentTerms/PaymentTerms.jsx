@@ -48,7 +48,15 @@ function PaymentTermsPage() {
   {
     id: 'wallet-withdrawal',
     title: 'Wallet Withdrawal',
-    content:'Wallet balance added to the Platform is intended solely for use toward Platform services. Direct or instant withdrawal of wallet balance by the User is not supported. Users may submit a withdrawal request to Anuthi Software Solutions, which will be reviewed and processed at the Company’s discretion after verification. Approved withdrawal amounts will be transferred to the User’s registered bank account. Refunds or reversals, where applicable, may be credited to the User’s wallet or original payment method in accordance with the Platform’s Refund Policy. Withdrawal and refund processing timelines may vary and typically take 3–5 business days or longer depending on bank or payment gateway processing cycles.'},
+    content:[ 
+    'Wallet credits added to the Platform are intended exclusively for use toward Platform services such as Virtual Try-On and AI Image Generation.',
+    'Wallet credits are usage tokens and do not have cash value.',
+    'Direct or instant withdrawal of wallet credits by the User is not supported.Users may sometimes request withdrawal in situations such as account deletion however, the Platform does not support wallet withdrawals under any circumstances.',
+    'In such cases, users may contact Anuthi Software Solutions via email for clarification or refund review, where applicable, in accordance with the Platform’s Refund Policy. Approved refunds, if any, may be credited back to the User’s wallet as credits or to the original payment method depending on the transaction status and payment gateway rules. ',
+    'Wallet-based refunds will appear as credit additions in the transaction history.',
+    'Refund processing timelines may vary and typically take 3–5 business days or longer depending on bank or payment gateway processing cycles.'
+    ],
+  },
   {
     id: 'data-security',
     title: 'Data Security',
@@ -57,7 +65,7 @@ function PaymentTermsPage() {
   {
     id: 'contact',
     title: 'Contact & Support',
-    content:'For payment-related queries or support, please contact: Business Name: Anuthi Software Solutions, Email: naveen.kumar@anuthisoft.com, Phone: 08192 315134'
+    content:'For payment-related queries or support, please contact: Business Name: Anuthi Software Solutions Pvt Ltd, Email: naveen.kumar@anuthisoft.com, Phone: 08192 315134'
   }
 ];
  
@@ -95,12 +103,18 @@ function PaymentTermsPage() {
       <main className="all-terms-content">
         {termsSections.map((section, index) => (
           <section key={section.id} className="term-section">
-            <div className="section-number">
-              <span>{index + 1}</span>
-            </div>
+            
             <div className="section-content">
               <h2>{section.title}</h2>
-              <p>{section.content}</p>
+                {Array.isArray(section.content) ? (
+          <ul>
+            {section.content.map((item, index) => (
+              <li key={index}>{item}</li>
+            ))}
+          </ul>
+        ) : (
+          <p className="content-text">{section.content}</p>
+        )}
             </div>
           </section>
         ))}
